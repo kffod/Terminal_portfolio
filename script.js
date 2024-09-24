@@ -113,7 +113,7 @@ const commandFunctions = {
     help: function () {
         let helpText = "commands: <br> <br>";
         commands.forEach((command) => {
-          helpText += `<span class="text-green">${command.name}</span> - ${command.description} <br>`;
+          helpText += `<span class="text-red">${command.name}</span> - ${command.description} <br>`;
         });
         return helpText;
     },
@@ -154,7 +154,7 @@ certifications: function () {
         // Create a table of technologies
         const { table, maxCellLength } = createTable(technologies);
         const containerWidth = maxCellLength * technologies[0].length * 10 + 20;
-        const tableContainer = `<div style="width:${containerWidth}px" class="text-green"> <pre>${table}</pre> </div>`;
+        const tableContainer = `<div style="width:${containerWidth}px" class="text-red"> <pre>${table}</pre> </div>`;
         return tableContainer;
     },
   open: function (command) {
@@ -190,7 +190,7 @@ const postRenderFunctions = {
    }
 };
 
-output.innerHTML += "Type <span class='text-green'>'help'</span> for a list of commands. <br /> <br />";
+output.innerHTML += "Type <span class='text-red'>'help'</span> for a list of commands. <br /> <br />";
 input.focus();  
 input.addEventListener("keydown", function (event) {
   if (event.key === "Enter") {
@@ -209,7 +209,7 @@ input.addEventListener("keydown", function (event) {
         } else if (command === "clear") {
           output.innerHTML = "";
       } else {
-            output.innerHTML += `<span class="text-red">Invalid command: ${command}</span>. <br> Type <span class="text-green">help</span> for a list of commands.`
+            output.innerHTML += `<span class="text-red">Invalid command: ${command}</span>. <br> Type <span class="text-red">help</span> for a list of commands.`
         }
         if (command !== "clear") {
             output.innerHTML += "<br> <br>"
