@@ -64,31 +64,13 @@ First, clone the repository to your local machine using the following command:
 ```bash
 git clone https://github.com/kffod/Terminal_portfolio.git
 ```
-###2. Navigate to the Project Directory
+### 2. Navigate to the Project Directory
 Go to the directory where you cloned the project:
 ```
 cd Terminal_portfolio
 ```
-###3. Install Dependencies
-If your project uses any package managers like npm (for Node.js projects), install the dependencies:
-```
-npm install
-```
-###4. Start the Local Server
-If you're using a simple HTML/CSS/JS setup, you can start a local server with the following command:
-```
-npx  serve
-```
-Or, if you're using a specific framework like React:
-```
-npm start
-```
-###5. Open the Application
-Once the server is up and running, open your browser and go to the following address to view the website locally:
-```
-http://localhost:3000
-```
-
+### 3.Access It
+You can directly access it using ``Live Server`` Extension of VScode.
 
 ### Key Additions:
 - **How to Deploy Locally**: Added detailed instructions on how to clone, install dependencies, start a local server, and view the portfolio on `localhost`.
